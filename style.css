@@ -1,56 +1,47 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-.container {
-    text-align: center;
+.chat-container {
+    max-width: 400px;
+    margin: 50px auto;
     background-color: #fff;
-    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
-label {
-    font-weight: bold;
+.chat-box {
+    height: 300px;
+    padding: 15px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ccc;
 }
 
-input {
-    padding: 8px;
-    margin: 10px 0;
+#user-input {
+    width: 70%;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
 }
 
 button {
-    background-color: #4caf50;
+    width: 25%;
+    padding: 10px;
+    margin: 10px;
+    background-color: #4CAF50;
     color: #fff;
-    padding: 8px 16px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
-    border-radius: 4px;
+    outline: none;
 }
 
 button:hover {
     background-color: #45a049;
-}
-
-#expensesList {
-    margin-top: 20px;
-}
-
-.expense {
-    margin-bottom: 8px;
-}
-
-.expense span {
-    margin-right: 10px;
-}
-
-p {
-    margin-top: 20px;
-    font-weight: bold;
 }
