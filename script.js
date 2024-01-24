@@ -1,4 +1,3 @@
-// script.js
 
 import * as long from './long_responses.js';
 
