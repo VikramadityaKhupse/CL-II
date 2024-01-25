@@ -1,5 +1,4 @@
 
-import * as long from './long_responses.js';
 
 function messageProbability(userMessage, recognisedWords, singleResponse = false, requiredWords = []) {
     let messageCertainty = 0;
@@ -37,17 +36,42 @@ function checkAllMessages(message) {
     response('Hello!', ['hello', 'hi', 'hey', 'sup', 'heyo'], true);
     response('See you!', ['bye', 'goodbye'], true);
     response('I\'m doing fine, and you?', ['how', 'are', 'you', 'doing'], true, ['how', 'you']);
-    response('You\'re welcome!', ['thank', 'thanks'], true);
-    response('Thank you!', ['i', 'love', 'code', 'palace'], false, ['code', 'palace']);
+    response('You\'re welcome!', ['thank', 'thanks', 'thank', 'you', 'so', 'much'], true);
+    response('Good to hear that!', ['I', 'i', 'am', 'good'], true, ['I', 'good']);
+    response("My name is ChatBot! What is your?", ['what', 'is', 'your', 'name'], true, ['your', 'name']);
+    response('I am still in development stage. So you can ask me some simple questions only.', ['How', 'this', 'bot', 'works', 'working', 'tell'], true, [ 'work']);
 
-    response(long.R_ADVICE, ['give', 'advice'], false, ['advice']);
-    response(long.R_EATING, ['what', 'you', 'eat'], false, ['you', 'eat']);
-    response(long.R_SUBSCRIBE, ['How', 'to', 'subscribe', 'mess', 'subscription'], false, ['How', 'mess', 'subscribe']);
-    response(long.R_NOTIFS, ['Turn', 'not', 'notifications', 'how', 'to'], false, ['How', 'Notifications']);
+   
 
-    const bestMatch = Object.keys(highestProbList).reduce((a, b) => highestProbList[a] > highestProbList[b] ? a : b);
+    const allKeys = Object.keys(highestProbList);
 
-    return long.unknown();
+    let bestMatch = allKeys[0];
+
+    for (let i = 1; i < allKeys.length; i++) {
+    const currentKey = allKeys[i];
+
+    if (highestProbList[currentKey] > highestProbList[bestMatch]) {
+        bestMatch = currentKey;
+    }
+    }
+
+
+
+    return bestMatch;
+}
+
+function appendUserMessage(message) {
+    const chatBox = document.getElementById('chat-box');
+    const userMessage = `<div class="user-message">${message}</div>`;
+    chatBox.innerHTML += userMessage;
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+function appendBotMessage(message) {
+    const chatBox = document.getElementById('chat-box');
+    const botMessage = `<div class="bot-message">Bot: ${message}</div>`;
+    chatBox.innerHTML += botMessage;
+    chatBox.scrollTop = chatBox.scrollHeight;
 }
 
 function getResponse(userInput) {
@@ -56,16 +80,17 @@ function getResponse(userInput) {
     return response;
 }
 
+
 function sendMessage() {
     const userInput = document.getElementById('user-input').value;
-    const chatBox = document.getElementById('chat-box');
 
-    chatBox.innerHTML += `<div class="user-message">${userInput}</div>`;
+    if (userInput.trim() !== '') {
+        appendUserMessage(userInput);
 
-    const botResponse = getResponse(userInput);
-    chatBox.innerHTML += `<div class="bot-message">Bot: ${botResponse}</div>`;
+        const botResponse = getResponse(userInput);
 
-    document.getElementById('user-input').value = '';
+        appendBotMessage(botResponse);
 
-    chatBox.scrollTop = chatBox.scrollHeight;
+        document.getElementById('user-input').value = '';
+    }
 }

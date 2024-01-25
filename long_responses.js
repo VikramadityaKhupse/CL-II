@@ -19,3 +19,9 @@ function unknown() {
 
 // Exporting the functions and variables
 export { R_EATING, R_ADVICE, R_SUBSCRIBE, R_NOTIFS, unknown };
+
+
+// response(long.R_ADVICE, ['give', 'advice'], false, ['advice']);
+// response(long.R_EATING, ['what', 'you', 'eat'], false, ['you', 'eat']);
+// response(long.R_SUBSCRIBE, ['How', 'to', 'subscribe', 'mess', 'subscription'], false, ['How', 'mess', 'subscribe']);
+// response(long.R_NOTIFS, ['Turn', 'not', 'notifications', 'how', 'to'], false, ['How', 'Notifications']);
