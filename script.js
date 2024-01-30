@@ -38,10 +38,10 @@ function checkAllMessages(message) {
     response('I\'m doing fine, and you?', ['how', 'are', 'you', 'doing'], true, ['how', 'you']);
     response('You\'re welcome!', ['thank', 'thanks', 'thank', 'you', 'so', 'much'], true);
     response('Good to hear that!', ['I', 'i', 'am', 'good'], true, ['I', 'good']);
-    response("My name is ChatBot! What is your?", ['what', 'is', 'your', 'name'], true, ['your', 'name']);
+    response("My name is ChatBot! What is your?", ['what', 'is', 'your'], true, ['your', 'name']);
     response('I am still in development stage. So you can ask me some simple questions only.', ['How', 'this', 'bot', 'works', 'working', 'tell'], true, [ 'work']);
-
-   
+    response('Yes I did! Ate 100W of energy. What u ate?', ['what', 'you', 'ate', 'dinner', 'lunch', 'eat'], true, ['what', 'you', 'ate']);
+    
 
     const allKeys = Object.keys(highestProbList);
 
