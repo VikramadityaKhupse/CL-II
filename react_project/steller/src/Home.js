@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Container, Segment } from "semantic-ui-react";
-import './Home.css'
+import './Home.css';
 import { useSpeechSynthesis } from 'react-speech-kit';
 
 function Home() {
