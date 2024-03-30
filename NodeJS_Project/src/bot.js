@@ -1,12 +1,13 @@
 
 const { Client, Events, GatewayIntentBits } = require('discord.js');
-const { token } = require('./config.json');
+const { token } = require('/home/vikramaditya/CL-II/NodeJS_Project/config.json');
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+client.once(Events.ClientReady, readyClient => {
+	console.log(`Ready! Logged in as ${readyClient.user.tag}`);
 });
+
 
 client.on('message', msg => {
   if (msg.content === 'ping') {
@@ -14,5 +15,7 @@ client.on('message', msg => {
   }
 });
 
-// This line must be at the very end
-client.login(token); // Signs the bot in with the token
+// Log in to Discord with your client's token
+client.login(token);
+
+
