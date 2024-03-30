@@ -1,19 +1,16 @@
-require('dotenv').config();
-console.log(process.env.DISCORD_BOT_TOKEN);
+import { config } from 'dotenv';
+config();
 const { Client, Intents } = require('discord.js');
+const client = new Client({ 
+  intents: [
+      
+      // Add more intents as needed
+  ] 
+}); // Creates new client
 
-// Specify the intents your bot needs
-const intents = [
-    Intents.FLAGS.GUILDS, // Receive guild events
-    Intents.FLAGS.GUILD_MESSAGES, // Receive message events
-    // Add more intents as needed
-  ];
-  
-  // Create a new Discord.js Client instance with the specified intents
-  const client = new Client({ intents });
-  
-  // Your bot logic goes here
-  
-  // Login to Discord with your bot token
-  client.login('your-bot-token');
-  
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+// This line must be at the very end
+client.login("MTIxMjEwOTU1ODYxNzYwODI1Mg.Gss6SI.AUMbggDXLdyAf3BXGbARogKchcuNvlFPAMzwfs"); // Signs the bot in with the token
