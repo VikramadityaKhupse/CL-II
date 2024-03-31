@@ -2,6 +2,9 @@ const { ActionRowBuilder, ButtonBuilder, ButtonStyle, SlashCommandBuilder } = re
 
 module.exports = {
 	// data: new SlashCommandBuilder()...
+    data: new SlashCommandBuilder()
+		.setName('ban')
+		.setDescription('Bans target user'),
 	async execute(interaction) {
 		const target = interaction.options.getUser('target');
 		const reason = interaction.options.getString('reason') ?? 'No reason provided';
