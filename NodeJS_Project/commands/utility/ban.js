@@ -1,30 +1,39 @@
-const { ActionRowBuilder, ButtonBuilder, ButtonStyle, SlashCommandBuilder } = require('discord.js');
+const { SlashCommandBuilder, PermissionsBitField } = require('discord.js');
 
 module.exports = {
-	// data: new SlashCommandBuilder()...
-    data: new SlashCommandBuilder()
-		.setName('ban')
-		.setDescription('Bans target user'),
-	async execute(interaction) {
-		const target = interaction.options.getUser('target');
-		const reason = interaction.options.getString('reason') ?? 'No reason provided';
+  data: new SlashCommandBuilder()
+    .setName('ban')
+    .setDescription('Bans a user from the server.')
+    .addUserOption(option =>
+      option.setName('target')
+        .setDescription('The user to ban')
+        .setRequired(true)
+    )
+    .addStringOption(option =>
+      option.setName('reason')
+        .setDescription('Optional reason for the ban')
+    )
+    .setDefaultPermission(false), // Set to false to restrict command usage (needs "Ban Members" permission)
+  async execute(interaction) {
+    const targetUser = interaction.options.getUser('target');
+    const reason = interaction.options.getString('reason') || 'No reason provided';
 
-		const confirm = new ButtonBuilder()
-			.setCustomId('confirm')
-			.setLabel('Confirm Ban')
-			.setStyle(ButtonStyle.Danger);
+    // Check permissions
+    if (!interaction.member.permissions.has(PermissionsBitField.Flags.BanMembers)) {
+      return await interaction.reply({ content: "You don't have permission to use this command.", ephemeral: true });
+    }
 
-		const cancel = new ButtonBuilder()
-			.setCustomId('cancel')
-			.setLabel('Cancel')
-			.setStyle(ButtonStyle.Secondary);
+    // Check bot's permissions
+    if (!interaction.guild.members.me.permissions.has(PermissionsBitField.Flags.BanMembers)) {
+      return await interaction.reply({ content: "I don't have permission to ban members.", ephemeral: true });
+    }
 
-		const row = new ActionRowBuilder()
-			.addComponents(cancel, confirm);
-
-		await interaction.reply({
-			content: `Are you sure you want to ban ${target} for reason: ${reason}?`,
-			components: [row],
-		});
-	},
+    try {
+      await targetUser.ban({ reason });
+      await interaction.reply({ content: `Successfully banned ${targetUser.tag} for ${reason}`, ephemeral: true });
+    } catch (error) {
+      console.error('Error banning user:', error);
+      await interaction.reply({ content: 'Failed to ban user. Check the console for details.', ephemeral: true });
+    }
+  },
 };
