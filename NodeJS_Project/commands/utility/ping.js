@@ -8,12 +8,12 @@ module.exports = {
 		await interaction.reply('Pong!');
 	},
 };
-const data = new SlashCommandBuilder()
-	.setName('say')
-	.setDescription('Replies with your input!')
-	.addStringOption(option =>
-		option.setName('input')
-			.setDescription('The input to echo back'))
-	.addChannelOption(option =>
-		option.setName('channel')
-			.setDescription('The channel to echo into'));
+// const data = new SlashCommandBuilder()
+// 	.setName('say')
+// 	.setDescription('Replies with your input!')
+// 	.addStringOption(option =>
+// 		option.setName('input')
+// 			.setDescription('The input to echo back'))
+// 	.addChannelOption(option =>
+// 		option.setName('channel')
+// 			.setDescription('The channel to echo into'));
