@@ -11,6 +11,7 @@ module.exports = {
         .addChannelOption(option =>
             option.setName('channel')
                 .setDescription('The channel to say it in (optional)')
+                .setRequired(true)
                 .addChannelTypes(ChannelType.GuildText)), // Restrict to guild text channels
     async execute(interaction) {
         const input = interaction.options.getString('input');
