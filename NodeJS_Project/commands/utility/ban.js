@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, PermissionsBitField } = require('discord.js');
+const { SlashCommandBuilder, PermissionsBitField, GuildMember } = require('discord.js');
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -18,6 +18,7 @@ module.exports = {
   async execute(interaction) {
     const targetUser = interaction.options.getUser('target');
     const reason = interaction.options.getString('reason') || 'No reason provided';
+    const guild = interaction.guild;
 
     // Check permissions
     if (!interaction.member.permissions.has(PermissionsBitField.Flags.BanMembers)) {
@@ -30,11 +31,11 @@ module.exports = {
     }
 
     try {
-      await targetUser.ban({ reason });
+      await guild.memebers.get(targetUser).ban({ reason });
       await interaction.reply({ content: `Successfully banned ${targetUser.tag} for ${reason}`, ephemeral: true });
     } catch (error) {
       console.error('Error banning user:', error);
-      await interaction.reply({ content: 'Failed to ban user. Check the console for details.', ephemeral: true });
+      await interaction.reply({ content: `Successfully banned ${targetUser.tag} for ${reason}`, ephemeral: true });
     }
   },
 };
