@@ -12,6 +12,7 @@ module.exports = {
     .addStringOption(option =>
       option.setName('reason')
         .setDescription('Optional reason for the ban')
+        .setRequired(true)
     )
     .setDefaultPermission(false), // Set to false to restrict command usage (needs "Ban Members" permission)
   async execute(interaction) {
