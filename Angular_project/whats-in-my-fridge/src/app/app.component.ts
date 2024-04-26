@@ -9,5 +9,13 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'whats-in-my-fridge';
+  title = 'I am Hungry! :(';
+
+  constructor(){
+    setTimeout(() => {
+
+      this.title = 'What\'s in my fridge!?';
+      
+    }, 3000);
+  }
 }
