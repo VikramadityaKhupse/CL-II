@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <!-- Include other necessary scripts and stylesheets -->
 </head>
 <body>
@@ -11,7 +12,7 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere rerum ducimus, ratione nesciunt enim aliquam deleniti expedita nobis nulla temporibus eveniet repudiandae facilis optio! Vel magnam dicta aut dolores iusto
         </p>
 
-        <form>
+        <form ng-submit="onSubmit()">
             First Name: <input type="text" ng-model="firstname">
             <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
@@ -20,5 +21,6 @@
     </div>
 
     <!-- Include your AngularJS script here -->
+    <script src="app.component.js"></script>
 </body>
 </html>

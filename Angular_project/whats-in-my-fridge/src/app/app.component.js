@@ -1,6 +1,3 @@
-// app.component.ts
-import angular from 'angular';
-
 angular.module('myApp', [])
   .controller('MyController', function($scope, $timeout) {
     $scope.title = 'I am Hungry! :(';
