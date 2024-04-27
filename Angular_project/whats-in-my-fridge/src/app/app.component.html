@@ -1,14 +1,24 @@
-<div>
-  <h1 class='text-center'>{{ title }}</h1>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere rerum ducimus, ratione nesciunt enim aliquam deleniti expedita nobis nulla temporibus eveniet repudiandae facilis optio! Vel magnam dicta aut dolores iusto
-  </p>
- 
+<!-- index.html -->
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <!-- Include other necessary scripts and stylesheets -->
+</head>
+<body>
+    <div ng-controller="MyController">
+        <h1 class="text-center">{{ title }}</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere rerum ducimus, ratione nesciunt enim aliquam deleniti expedita nobis nulla temporibus eveniet repudiandae facilis optio! Vel magnam dicta aut dolores iusto
+        </p>
 
-  <div class="container-fluid">
-   
-    
-   
-    
-  </div>
-</div>
+        <form>
+            First Name: <input type="text" ng-model="firstname">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+
+        <h1>You entered: {{ firstname }}</h1>
+    </div>
+
+    <!-- Include your AngularJS script here -->
+</body>
+</html>
