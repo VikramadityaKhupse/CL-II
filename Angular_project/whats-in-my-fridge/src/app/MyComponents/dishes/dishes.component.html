@@ -1,1 +1,24 @@
 
+<div>
+    <h2>What's in My Fridge?</h2>
+    <label for="ingredientInput">Enter Ingredients:</label>
+    <input type="text" id="ingredientInput" [(ngModel)]="ingredientsInput">
+    <button (click)="filterDishes()">Search</button>
+  </div>
+  
+  <div *ngIf="filteredDishes.length > 0">
+    <h3>Suggested Dishes:</h3>
+    <ul>
+      <li *ngFor="let dish of filteredDishes">
+        <h4>{{ dish.name }}</h4>
+        <p>{{ dish.description }}</p>
+        <ul>
+          <li *ngFor="let ingredient of dish.ingredients">{{ ingredient }}</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="filteredDishes.length === 0">
+    <p>No dishes found.</p>
+  </div>
+  

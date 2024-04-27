@@ -1,77 +1,33 @@
-import { Component } from '@angular/core';
-import {Dish} from "../../Dishes";
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Dish } from "../../Dishes";
+
 @Component({
   selector: 'app-dishes',
-  standalone: true,
-  imports: [],
   templateUrl: './dishes.component.html',
-  styleUrl: './dishes.component.css'
+  styleUrls: ['./dishes.component.css']
 })
-export class DishesComponent {
-  dishes?:Dish[];
+export class DishesComponent implements OnInit {
+  dishes: Dish[] = [];
+  ingredientsInput: string = '';
+  filteredDishes: Dish[] = [];
 
-  constructor(){
+  constructor(private http: HttpClient) { }
 
-    this.dishes = [
-
-      {
-        name:"Pizza",
-        ingredients : ["pizza base", "cheese", "sauce", "oregano", "dough", "baby corn", "black olive"],
-        description : "This is pizza"
-
-      },
-      {
-        name: "Pasta Primavera",
-        ingredients: [
-          "pasta (fusilli, penne, or your preference)",
-          "fresh vegetables (broccoli florets, asparagus, sliced carrots, cherry tomatoes)",
-          "garlic cloves, minced",
-          "olive oil",
-          "lemon juice",
-          "parmesan cheese",
-          "salt and pepper to taste",
-          "fresh herbs (optional: basil, parsley)",
-        ],
-        description: "A light and flavorful pasta dish with seasonal vegetables tossed in a simple lemon garlic sauce. Perfect for a vegetarian meal."
-      },
-      {
-        name: "Chicken Tikka Masala",
-        ingredients: [
-          "boneless, skinless chicken thighs, cubed",
-          "yogurt",
-          "tandoori masala",
-          "ginger, grated",
-          "garlic, minced",
-          "vegetable oil",
-          "onion, chopped",
-          "tomato puree",
-          "coconut milk",
-          "garam masala",
-          "cilantro, chopped (for garnish)",
-          "basmati rice (for serving)",
-        ],
-        description: "A creamy and flavorful Indian dish with tender chicken marinated in yogurt and spices, simmered in a rich tomato and coconut milk sauce. Served with basmati rice."
-      },
-      {
-        name: "Thai Green Curry with Vegetables",
-        ingredients: [
-          "green curry paste",
-          "coconut milk",
-          "vegetable broth",
-          "bell peppers (red, yellow, green), sliced",
-          "broccoli florets",
-          "snow peas",
-          "bamboo shoots (optional)",
-          "kaffir lime leaves (optional)",
-          "fish sauce",
-          "palm sugar (or brown sugar)",
-          "basil leaves (for garnish)",
-          "rice noodles (for serving)",
-        ],
-        description: "A fragrant and flavorful Thai curry with a medley of vegetables simmered in a creamy green curry sauce. Served with rice noodles for a satisfying meal."
-      },
-
-    ]
+  ngOnInit() {
+    this.http.get<Dish[]>('/assets/dishes.json').subscribe(data => {
+      this.dishes = data;
+    });
   }
 
+  filterDishes() {
+    const ingredients = this.ingredientsInput.toLowerCase().split(',');
+    this.filteredDishes = this.dishes.filter(dish =>
+      ingredients.every(ingredient =>
+        dish.ingredients?.some(dishIngredient =>
+          dishIngredient.trim().toLowerCase().includes(ingredient.trim())
+        )
+      )
+    );
+  }
 }
