@@ -3,51 +3,16 @@
 <head>
     <title>What's in my fridge?</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        /* Custom styles */
-        body {
-            background-color: #f8f9fa;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .btn-primary {
-            background-color: #007bff;
-            border: none;
-        }
-
-        .card {
-            margin-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .card-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .card-text {
-            font-size: 1rem;
-            color: #555;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="App.css">
 </head>
 <body ng-controller="MainController">
     <div class="container">
-        <h1 class="text-center mt-5">{{ title }}</h1>
+        <h1>{{title}}</h1>
         
         <form class="mt-3 mb-4" ng-submit="searchRecipes()">
             <div class="form-group">
-                <label for="ingredients">Enter ingredients (comma separated):</label>
+                <label for="ingredients" class="fancy">Enter ingredients (comma separated):</label>
                 <input type="text" class="form-control" id="ingredients" ng-model="ingredientInput">
             </div>
             <button type="submit" class="btn btn-outline-success">Search</button>
@@ -57,8 +22,8 @@
             <div class="col-md-6" ng-repeat="recipe in recipes">
                 <div class="card mb-3">
                     <div class="card-body">
-                        <h3 class="card-title">{{ recipe.name }}</h3>
-                        <p class="card-text">Ingredients: {{ recipe.ingredients.join(', ') }}</p>
+                        <h3 class="fancy">{{ recipe.name }}</h3>
+                        <p class="card-text">Ingredients: <span class="ingredient">{{ recipe.ingredients.join(', ') }}</span></p>
                         <p class="card-text">Description: {{ recipe.description }}</p>
                     </div>
                 </div>
