@@ -1,7 +1,31 @@
+/* Style for the form */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
+.form-group {
+  margin-bottom: 20px;
+}
 
-.done-true {
-    text-decoration: line-through;
-    color: grey;
-  }
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
 
+/* Style for the card layout */
+.card {
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #333;
+}
