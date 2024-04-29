@@ -52,7 +52,7 @@ h1 {
   text-align: center;
   cursor: pointer;
   --s: 0.1em;   
-  --c: #2c4bff; 
+  --c: #00ff3c; 
   color: #0000;
   padding-bottom: var(--s);
   background: 
@@ -83,5 +83,5 @@ h1:hover {
 
 @keyframes rainbow-text-animation {
   0% { filter: hue-rotate(0deg); }
-  100% { filter: hue-rotate(180deg); }
+  100% { filter: hue-rotate(360deg); }
 }
