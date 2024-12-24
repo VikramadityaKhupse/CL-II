@@ -1,0 +1,388 @@
+[
+  {
+    "name": "Pizza",
+    "ingredients": [
+      "pizza base", "cheese", "sauce", "oregano", "dough", "baby corn", "black olive",
+      "flour", "tomato", "capsicum", "onion", "mushroom", "jalapenos", "bell pepper"
+    ],
+    "required-ingredient": ["pizza base", "cheese", "sauce"],
+    "description": "This is pizza"
+  },
+  {
+    "name": "Pasta Primavera",
+    "ingredients": [
+      "pasta (fusilli, penne, or your preference)", "fresh vegetables (broccoli florets, asparagus, sliced carrots, cherry tomatoes)",
+      "garlic cloves, minced", "olive oil", "lemon juice", "parmesan cheese", "salt and pepper to taste",
+      "fresh herbs (optional: basil, parsley)",
+      "salt", "pepper", "oregano", "red chili flakes", "butter"
+    ],
+    "required-ingredient": ["pasta", "fresh vegetables", "garlic", "olive oil"],
+    "description": "A light and flavorful pasta dish with seasonal vegetables tossed in a simple lemon garlic sauce. Perfect for a vegetarian meal."
+  },
+  {
+    "name": "Chicken Tikka Masala",
+    "ingredients": [
+      "boneless, skinless chicken thighs, cubed", "yogurt", "tandoori masala", "ginger, grated", "garlic, minced",
+      "vegetable oil", "onion, chopped", "tomato puree", "coconut milk", "garam masala", "cilantro, chopped (for garnish)",
+      "basmati rice (for serving)",
+      "salt", "pepper", "lemon", "coriander leaves", "green chili"
+    ],
+    "required-ingredient": ["chicken", "yogurt", "ginger", "garlic", "onion", "tomato puree", "coconut milk", "rice"],
+    "description": "A creamy and flavorful Indian dish with tender chicken marinated in yogurt and spices, simmered in a rich tomato and coconut milk sauce. Served with basmati rice."
+  },
+  {
+    "name": "Thai Green Curry with Vegetables",
+    "ingredients": [
+      "green curry paste", "coconut milk", "vegetable broth", "bell peppers (red, yellow, green), sliced",
+      "broccoli florets", "snow peas", "bamboo shoots (optional)", "kaffir lime leaves (optional)", "fish sauce",
+      "palm sugar (or brown sugar)", "basil leaves (for garnish)", "rice noodles (for serving)",
+      "salt", "pepper", "lime", "lemongrass", "coriander roots", "galangal"
+    ],
+    "required-ingredient": ["green curry paste", "coconut milk", "bell peppers", "broccoli florets", "fish sauce", "basil leaves", "rice noodles"],
+    "description": "A fragrant and flavorful Thai curry with a medley of vegetables simmered in a creamy green curry sauce. Served with rice noodles for a satisfying meal."
+  },
+   {
+    "name": "Spaghetti Carbonara",
+    "ingredients": [
+      "spaghetti", "bacon", "eggs", "parmesan cheese", "black pepper", "salt", "olive oil", "garlic"
+    ],
+    "required-ingredient": ["spaghetti", "bacon", "eggs", "parmesan cheese"],
+    "description": "A classic Italian pasta dish made with spaghetti, eggs, bacon, and parmesan cheese."
+  },
+  {
+    "name": "Caesar Salad",
+    "ingredients": [
+      "romaine lettuce", "croutons", "parmesan cheese", "Caesar dressing", "lemon", "garlic", "olive oil", "anchovy paste", "Worcestershire sauce", "Dijon mustard", "salt", "black pepper"
+    ],
+    "required-ingredient": ["romaine lettuce", "croutons", "parmesan cheese", "Caesar dressing"],
+    "description": "A classic salad made with romaine lettuce, croutons, parmesan cheese, and Caesar dressing."
+  },
+  {
+    "name": "Beef Stroganoff",
+    "ingredients": [
+      "beef sirloin", "onion", "mushrooms", "beef broth", "sour cream", "butter", "flour", "paprika", "salt", "black pepper", "egg noodles"
+    ],
+    "required-ingredient": ["beef sirloin", "onion", "mushrooms", "beef broth", "sour cream"],
+    "description": "A hearty Russian dish made with tender beef sirloin, mushrooms, and a creamy sour cream sauce."
+  },
+  {
+    "name": "Chicken Alfredo",
+    "ingredients": [
+      "chicken breast", "fettuccine pasta", "heavy cream", "parmesan cheese", "butter", "garlic", "salt", "black pepper", "parsley"
+    ],
+    "required-ingredient": ["chicken breast", "fettuccine pasta", "heavy cream", "parmesan cheese"],
+    "description": "A creamy pasta dish made with grilled chicken, fettuccine pasta, and a rich Alfredo sauce."
+  },
+  {
+    "name": "Beef Chili",
+    "ingredients": [
+      "ground beef", "onion", "bell pepper", "kidney beans", "crushed tomatoes", "tomato paste", "beef broth", "chili powder", "cumin", "paprika", "garlic powder", "salt", "black pepper", "olive oil"
+    ],
+    "required-ingredient": ["ground beef", "onion", "bell pepper", "kidney beans", "crushed tomatoes"],
+    "description": "A hearty and flavorful chili made with ground beef, beans, tomatoes, and spices."
+  },
+  {
+    "name": "Vegetable Stir-Fry",
+    "ingredients": [
+      "mixed vegetables (bell peppers, broccoli, carrots, snow peas)", "tofu", "soy sauce", "garlic", "ginger", "sesame oil", "cornstarch", "vegetable oil", "rice"
+    ],
+    "required-ingredient": ["mixed vegetables", "tofu", "soy sauce", "garlic", "ginger"],
+    "description": "A quick and healthy dish made with colorful mixed vegetables, tofu, and a flavorful stir-fry sauce."
+  },
+  {
+    "name": "Beef Tacos",
+    "ingredients": [
+      "ground beef", "taco shells", "shredded lettuce", "diced tomato", "shredded cheese", "sour cream", "taco seasoning", "salsa", "avocado", "lime"
+    ],
+    "required-ingredient": ["ground beef", "taco shells", "shredded lettuce", "diced tomato", "shredded cheese"],
+    "description": "A delicious Mexican dish made with seasoned ground beef, crispy taco shells, and all the fixings."
+  },
+  {
+    "name": "Vegetable Soup",
+    "ingredients": [
+      "vegetable broth", "carrots", "celery", "onion", "potatoes", "cabbage", "green beans", "tomatoes", "garlic", "thyme", "oregano", "bay leaf", "salt", "black pepper", "olive oil"
+    ],
+    "required-ingredient": ["vegetable broth", "carrots", "celery", "onion", "potatoes", "cabbage"],
+    "description": "A comforting soup made with a variety of fresh vegetables, herbs, and spices."
+  },
+  {
+    "name": "Chicken Fajitas",
+    "ingredients": [
+      "chicken breast", "bell peppers", "onion", "fajita seasoning", "flour tortillas", "sour cream", "salsa", "guacamole", "lime"
+    ],
+    "required-ingredient": ["chicken breast", "bell peppers", "onion", "fajita seasoning", "flour tortillas"],
+    "description": "A flavorful Tex-Mex dish made with grilled chicken, peppers, and onions, served with tortillas and toppings."
+  },
+  {
+    "name": "Egg Fried Rice",
+    "ingredients": [
+      "cooked rice", "eggs", "frozen peas and carrots", "green onions", "soy sauce", "sesame oil", "garlic", "ginger", "vegetable oil"
+    ],
+    "required-ingredient": ["cooked rice", "eggs", "frozen peas and carrots", "green onions", "soy sauce"],
+    "description": "A quick and easy dish made with leftover rice, scrambled eggs, and vegetables, seasoned with soy sauce and aromatics."
+  },
+  {
+    "name": "Mushroom Risotto",
+    "ingredients": [
+      "arborio rice", "mushrooms", "onion", "garlic", "white wine", "vegetable broth", "parmesan cheese", "butter", "olive oil", "salt", "black pepper", "parsley"
+    ],
+    "required-ingredient": ["arborio rice", "mushrooms", "onion", "garlic", "white wine", "vegetable broth"],
+    "description": "A creamy Italian rice dish made with Arborio rice, mushrooms, and Parmesan cheese."
+  },
+  {
+    "name": "BBQ Pulled Pork Sandwiches",
+    "ingredients": [
+      "pork shoulder", "barbecue sauce", "hamburger buns", "coleslaw", "pickles", "salt", "black pepper"
+    ],
+    "required-ingredient": ["pork shoulder", "barbecue sauce", "hamburger buns"],
+    "description": "A delicious sandwich made with slow-cooked pulled pork, barbecue sauce, and coleslaw."
+  },
+  {
+    "name": "Beef and Broccoli",
+    "ingredients": [
+      "flank steak", "broccoli", "garlic", "ginger", "soy sauce", "brown sugar", "cornstarch", "sesame oil", "vegetable oil", "rice", "green onions"
+    ],
+    "required-ingredient": ["flank steak", "broccoli", "garlic", "ginger", "soy sauce"],
+    "description": "A savory Chinese dish made with tender beef and broccoli in a flavorful sauce."
+  },
+  {
+    "name": "Caprese Salad",
+    "ingredients": [
+      "tomatoes", "fresh mozzarella cheese", "fresh basil leaves", "balsamic glaze", "extra virgin olive oil", "salt", "black pepper"
+    ],
+    "required-ingredient": ["tomatoes", "fresh mozzarella cheese", "fresh basil leaves"],
+    "description": "A simple Italian salad made with ripe tomatoes, fresh mozzarella, and basil, drizzled with balsamic glaze and olive oil."
+  },
+  {
+    "name": "Lemon Garlic Shrimp Pasta",
+    "ingredients": [
+      "shrimp", "linguine pasta", "butter", "garlic", "lemon", "white wine", "cherry tomatoes", "spinach", "parmesan cheese", "salt", "black pepper", "red pepper flakes"
+    ],
+    "required-ingredient": ["shrimp", "linguine pasta", "butter", "garlic", "lemon", "white wine"],
+    "description": "A zesty pasta dish made with succulent shrimp, linguine, and a garlic lemon sauce."
+  },
+  {
+    "name": "Honey Soy Glazed Salmon",
+    "ingredients": [
+      "salmon fillets", "soy sauce", "honey", "garlic", "ginger", "sesame oil", "rice vinegar", "green onions", "sesame seeds", "olive oil", "salt", "black pepper"
+    ],
+    "required-ingredient": ["salmon fillets", "soy sauce", "honey", "garlic", "ginger"],
+    "description": "A flavorful seafood dish made with tender salmon fillets glazed with a sweet and savory sauce."
+  },
+  {
+    "name": "Vegetable Lasagna",
+    "ingredients": [
+      "lasagna noodles", "ricotta cheese", "mozzarella cheese", "parmesan cheese", "zucchini", "yellow squash", "bell peppers", "spinach", "tomato sauce", "garlic", "olive oil", "salt", "black pepper", "Italian seasoning"
+    ],
+    "required-ingredient": ["lasagna noodles", "ricotta cheese", "mozzarella cheese", "parmesan cheese", "tomato sauce"],
+    "description": "A hearty vegetarian lasagna made with layers of pasta, cheese, and assorted vegetables."
+  },
+  {
+    "name": "Lemon Herb Roast Chicken",
+    "ingredients": [
+      "whole chicken", "lemon", "garlic", "thyme", "rosemary", "parsley", "butter", "olive oil", "salt", "black pepper"
+    ],
+    "required-ingredient": ["whole chicken", "lemon", "garlic", "thyme", "rosemary"],
+    "description": "A juicy and flavorful roast chicken seasoned with lemon, garlic, and herbs."
+  },
+  {
+    "name": "Beef Enchiladas",
+    "ingredients": [
+      "ground beef", "enchilada sauce", "corn tortillas", "cheddar cheese", "onion", "garlic", "jalapeno", "cilantro", "cumin", "chili powder", "salt", "black pepper", "olive oil", "sour cream", "avocado"
+    ],
+    "required-ingredient": ["ground beef", "enchilada sauce", "corn tortillas", "cheddar cheese"],
+    "description": "A delicious Tex-Mex dish made with seasoned ground beef, rolled in corn tortillas and smothered in enchilada sauce and cheese."
+  },
+  {
+    "name": "Beef and Vegetable Stir-Fry",
+    "ingredients": [
+      "beef sirloin", "mixed vegetables (bell peppers, broccoli, carrots, snow peas)", "soy sauce", "oyster sauce", "garlic", "ginger", "cornstarch", "rice", "sesame oil", "vegetable oil", "green onions"
+    ],
+    "required-ingredient": ["beef sirloin", "mixed vegetables", "soy sauce", "oyster sauce"],
+    "description": "A flavorful stir-fry made with tender beef, colorful vegetables, and a savory sauce."
+  },
+  {
+    "name": "Margarita Pizza",
+    "ingredients": [
+      "pizza dough", "tomatoes", "fresh mozzarella cheese", "fresh basil leaves", "garlic", "olive oil", "salt", "black pepper"
+    ],
+    "required-ingredient": ["pizza dough", "tomatoes", "fresh mozzarella cheese", "fresh basil leaves"],
+    "description": "A classic Italian pizza topped with fresh tomatoes, mozzarella cheese, and basil leaves."
+  },
+   {
+    "name": "Honey Garlic Glazed Pork Chops",
+    "ingredients": [
+      "pork chops", "honey", "soy sauce", "garlic", "ginger", "olive oil", "salt", "black pepper"
+    ],
+    "required-ingredient": ["pork chops", "honey", "soy sauce", "garlic"],
+    "description": "Juicy pork chops cooked in a sweet and savory honey garlic glaze."
+  },
+  {
+    "name": "Vegetarian Chili",
+    "ingredients": [
+      "black beans", "kidney beans", "diced tomatoes", "bell peppers", "onion", "carrots", "celery", "corn", "vegetable broth", "chili powder", "cumin", "paprika", "garlic", "olive oil", "salt", "black pepper"
+    ],
+    "required-ingredient": ["black beans", "kidney beans", "diced tomatoes", "bell peppers", "onion", "carrots", "celery"],
+    "description": "A hearty and flavorful chili made with beans, vegetables, and spices."
+  },
+  {
+    "name": "Teriyaki Chicken",
+    "ingredients": [
+      "chicken thighs", "soy sauce", "brown sugar", "mirin", "rice vinegar", "garlic", "ginger", "sesame oil", "cornstarch", "green onions", "sesame seeds", "vegetable oil", "rice"
+    ],
+    "required-ingredient": ["chicken thighs", "soy sauce", "brown sugar", "mirin", "rice vinegar", "garlic", "ginger"],
+    "description": "Tender chicken thighs marinated in a sweet and savory teriyaki sauce, served over rice."
+  },
+  {
+    "name": "Shrimp Scampi",
+    "ingredients": [
+      "shrimp", "linguine pasta", "butter", "garlic", "white wine", "lemon", "parsley", "salt", "black pepper", "red pepper flakes", "olive oil"
+    ],
+    "required-ingredient": ["shrimp", "linguine pasta", "butter", "garlic", "white wine", "lemon"],
+    "description": "A classic Italian dish made with succulent shrimp, garlic, butter, and white wine, served over pasta."
+  },
+  {
+    "name": "Crispy Baked Chicken Tenders",
+    "ingredients": [
+      "chicken tenders", "breadcrumbs", "parmesan cheese", "garlic powder", "paprika", "salt", "black pepper", "eggs", "flour", "vegetable oil", "honey mustard sauce"
+    ],
+    "required-ingredient": ["chicken tenders", "breadcrumbs", "parmesan cheese", "eggs", "flour"],
+    "description": "Crispy baked chicken tenders coated in seasoned breadcrumbs, served with honey mustard sauce."
+  },
+  {
+    "name": "Mushroom Risotto",
+    "ingredients": [
+      "arborio rice", "mushrooms", "onion", "garlic", "white wine", "vegetable broth", "parmesan cheese", "butter", "olive oil", "salt", "black pepper", "parsley"
+    ],
+    "required-ingredient": ["arborio rice", "mushrooms", "onion", "garlic", "white wine", "vegetable broth"],
+    "description": "A creamy Italian rice dish made with Arborio rice, mushrooms, and Parmesan cheese."
+  },
+  {
+    "name": "BBQ Chicken Wings",
+    "ingredients": [
+      "chicken wings", "barbecue sauce", "butter", "garlic powder", "onion powder", "paprika", "salt", "black pepper", "vegetable oil", "celery sticks", "ranch dressing"
+    ],
+    "required-ingredient": ["chicken wings", "barbecue sauce", "butter"],
+    "description": "Crispy baked chicken wings tossed in barbecue sauce, served with celery sticks and ranch dressing."
+  },
+  {
+    "name": "Beef and Broccoli",
+    "ingredients": [
+      "flank steak", "broccoli", "garlic", "ginger", "soy sauce", "brown sugar", "cornstarch", "sesame oil", "vegetable oil", "rice", "green onions"
+    ],
+    "required-ingredient": ["flank steak", "broccoli", "garlic", "ginger", "soy sauce"],
+    "description": "A savory Chinese dish made with tender beef and broccoli in a flavorful sauce."
+  },
+  {
+    "name": "Chicken Parmesan",
+    "ingredients": [
+      "chicken breast", "breadcrumbs", "parmesan cheese", "eggs", "marinara sauce", "mozzarella cheese", "olive oil", "salt", "black pepper", "pasta"
+    ],
+    "required-ingredient": ["chicken breast", "breadcrumbs", "parmesan cheese", "eggs", "marinara sauce", "mozzarella cheese", "pasta"],
+    "description": "Breaded chicken breasts topped with marinara sauce and melted cheese, served over pasta."
+  },
+  {
+    "name": "Tomato Basil Bruschetta",
+    "ingredients": [
+      "baguette", "tomatoes", "fresh basil leaves", "garlic", "olive oil", "balsamic glaze", "salt", "black pepper"
+    ],
+    "required-ingredient": ["baguette", "tomatoes", "fresh basil leaves", "garlic", "olive oil"],
+    "description": "Toasted bread topped with diced tomatoes, fresh basil, garlic, and olive oil, drizzled with balsamic glaze."
+  },
+  {
+    "name": "Chicken Noodle Soup",
+    "ingredients": [
+      "chicken breast", "chicken broth", "carrots", "celery", "onion", "garlic", "parsley", "thyme", "bay leaf", "egg noodles", "salt", "black pepper"
+    ],
+    "required-ingredient": ["chicken breast", "chicken broth", "carrots", "celery", "onion", "egg noodles"],
+    "description": "A comforting soup made with tender chicken, vegetables, and noodles in a flavorful broth."
+  },
+  {
+    "name": "Vegetable Lo Mein",
+    "ingredients": [
+      "lo mein noodles", "mixed vegetables (bell peppers, broccoli, carrots, snow peas)", "soy sauce", "hoisin sauce", "sesame oil", "garlic", "ginger", "vegetable oil"
+    ],
+    "required-ingredient": ["lo mein noodles", "mixed vegetables", "soy sauce", "hoisin sauce"],
+    "description": "A flavorful Chinese noodle dish made with stir-fried vegetables and noodles in a savory sauce."
+  },
+  {
+    "name": "Spinach and Feta Stuffed Chicken Breast",
+    "ingredients": [
+      "chicken breast", "spinach", "feta cheese", "garlic", "lemon", "olive oil", "salt", "black pepper"
+    ],
+    "required-ingredient": ["chicken breast", "spinach", "feta cheese", "garlic", "lemon"],
+    "description": "Chicken breasts stuffed with spinach and feta cheese, baked to perfection."
+  },
+  {
+    "name": "Pulled Chicken Sandwiches",
+    "ingredients": [
+      "chicken thighs", "barbecue sauce", "hamburger buns", "coleslaw", "pickles", "salt", "black pepper", "olive oil"
+    ],
+    "required-ingredient": ["chicken thighs", "barbecue sauce", "hamburger buns"],
+    "description": "Tender pulled chicken tossed in barbecue sauce, served on buns with coleslaw and pickles."
+  },
+  {
+    "name": "Vegetarian Quesadillas",
+    "ingredients": [
+      "tortillas", "black beans", "corn", "bell peppers", "onion", "cheddar cheese", "salsa", "guacamole", "sour cream"
+    ],
+    "required-ingredient": ["tortillas", "black beans", "corn", "bell peppers", "onion", "cheddar cheese"],
+    "description": "Cheesy quesadillas filled with black beans, corn, peppers, and onions, served with salsa and guacamole."
+  },
+  {
+    "name": "Sesame Ginger Tofu Stir-Fry",
+    "ingredients": [
+      "tofu", "mixed vegetables (bell peppers, broccoli, carrots, snow peas)", "soy sauce", "hoisin sauce", "sesame oil", "garlic", "ginger", "cornstarch", "rice", "vegetable oil", "green onions"
+    ],
+    "required-ingredient": ["tofu", "mixed vegetables", "soy sauce", "hoisin sauce", "sesame oil", "garlic", "ginger"],
+    "description": "Crispy tofu and colorful vegetables stir-fried in a tangy sesame ginger sauce."
+  },
+  {
+    "name": "Poha",
+    "ingredients": [
+      "flattened rice (poha)", "onion", "potato", "peanuts", "green chili", "curry leaves", "mustard seeds", "turmeric powder", "salt", "sugar", "lemon juice", "coriander leaves"
+    ],
+    "required-ingredient": ["flattened rice (poha)", "onion", "potato", "peanuts", "curry leaves"],
+    "description": "A popular Maharashtrian breakfast dish made with flattened rice, onions, and spices."
+  },
+  {
+    "name": "Misal Pav",
+    "ingredients": [
+      "sprouted moth beans (matki)", "spicy sprouts curry (misal)", "onion", "tomato", "farsan (crunchy mix)", "lemon", "coriander leaves", "pav (bread rolls)"
+    ],
+    "required-ingredient": ["sprouted moth beans (matki)", "spicy sprouts curry (misal)", "onion", "tomato", "farsan (crunchy mix)", "pav (bread rolls)"],
+    "description": "A spicy Maharashtrian curry made with sprouted moth beans, served with bread rolls."
+  },
+  {
+    "name": "Sabudana Khichdi",
+    "ingredients": [
+      "sago pearls (sabudana)", "potato", "peanuts", "green chili", "curry leaves", "cumin seeds", "sugar", "salt", "lemon juice", "coriander leaves"
+    ],
+    "required-ingredient": ["sago pearls (sabudana)", "potato", "peanuts", "curry leaves"],
+    "description": "A fasting dish made with soaked sago pearls, potatoes, and peanuts, seasoned with spices."
+  },
+  {
+    "name": "Bharli Vangi",
+    "ingredients": [
+      "small brinjals (eggplants)", "coconut", "peanuts", "sesame seeds", "coriander seeds", "cumin seeds", "garlic", "tamarind", "jaggery", "turmeric powder", "red chili powder", "coriander leaves"
+    ],
+    "required-ingredient": ["small brinjals (eggplants)", "coconut", "peanuts", "sesame seeds", "coriander seeds", "cumin seeds"],
+    "description": "Stuffed brinjals cooked in a spicy coconut-based gravy, a traditional Maharashtrian dish."
+  },
+  {
+    "name": "Batata Vada",
+    "ingredients": [
+      "potatoes", "gram flour (besan)", "green chili", "ginger", "garlic", "turmeric powder", "red chili powder", "coriander leaves", "salt", "oil"
+    ],
+    "required-ingredient": ["potatoes", "gram flour (besan)"],
+    "description": "Spiced mashed potatoes coated with gram flour batter and deep-fried, served with chutney."
+  },
+  {
+    "name": "Puran Poli",
+    "ingredients": [
+      "chana dal (split chickpea lentils)", "jaggery", "whole wheat flour", "cardamom powder", "nutmeg powder", "ghee", "salt"
+    ],
+    "required-ingredient": ["chana dal (split chickpea lentils)", "jaggery", "whole wheat flour"],
+    "description": "A sweet flatbread made with a filling of cooked chana dal and jaggery, flavored with spices."
+  }
+]
